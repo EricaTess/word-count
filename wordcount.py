@@ -2,7 +2,6 @@
 import sys
 
 def count_words(phrase):
-    # print(phrase)
 
     file = open(sys.argv[1])
 
