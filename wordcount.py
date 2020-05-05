@@ -11,9 +11,10 @@ def count_words(phrase):
         lines = line.rstrip('\r\n').split(' ')
 
         for word in lines:
+            word = word.strip("'\",.!?-#$%^&();:_").lower()
             word_count[word] = word_count.get(word, 0) + 1
 
     for word, num in word_count.items():
-        print(f'{word} {num}')
+        print (word, num)
 
 count_words(sys.argv)
